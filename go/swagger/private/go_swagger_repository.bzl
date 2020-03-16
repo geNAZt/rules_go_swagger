@@ -65,13 +65,13 @@ go_swagger_repository = repository_rule(
             allow_files = [".json"],
         ),
         "_swagger": attr.label(
-            default = Label("@com_github_tnarg_rules_go_swagger_repository_tools//:bin/swagger"),
+            default = Label("@com_github_genazt_rules_go_swagger_repository_tools//:bin/swagger"),
             allow_single_file = True,
             executable = True,
             cfg = "host",   
         ),
         "_gazelle": attr.label(
-            default = Label("@bazel_gazelle_go_repository_tools//:bin/gazelle"),
+            default = Label("@bazel_gazelle//cmd/gazelle"),
             allow_single_file = True,
             executable = True,
             cfg = "host",
